@@ -52,7 +52,7 @@ public class ClientResourceAssembler extends BasicResourceAssembler<Client, Clie
 		ClientResource resource = super.toResource(entity);
 		
         resource.getLinks().add(
-        			linkTo(clientController).slash(entity).slash("client_id").withRel("client_id"));
+        			linkTo(productController).slash(entity).slash("id").withRel("id"));
 		
 		return resource;
 	}
