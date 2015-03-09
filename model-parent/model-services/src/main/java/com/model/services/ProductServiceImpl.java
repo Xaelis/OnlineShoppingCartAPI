@@ -96,5 +96,9 @@ public class ProductServiceImpl implements ProductService {
        
 	   product.setClient_id(productResource.getClient_id());
 	   product.setLabel(productResource.getLabel());
+	   
+	   productDao.save(product);
+	   
+	   return log.exit(productResourceAssembler.toResource( product));
    }
 }

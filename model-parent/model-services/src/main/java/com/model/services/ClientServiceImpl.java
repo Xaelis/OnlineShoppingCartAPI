@@ -96,5 +96,9 @@ public class ClientServiceImpl implements ClientService {
        
 	   client.setName(clientResource.getName());
 	   client.setColumn(clientResource.getColumn());
+	   
+	   clientDao.save(client);
+	   
+	   return log.exit(clientResourceAssembler.toResource( client));
    }
 }
