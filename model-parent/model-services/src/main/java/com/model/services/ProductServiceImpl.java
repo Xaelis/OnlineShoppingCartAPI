@@ -71,6 +71,17 @@ public class ProductServiceImpl implements ProductService {
     * @generated
     */
    public void update(Integer id, ProductResource productResource) {
+       log.entry(id);
+		
+	   Product product = productDao.findOne(id);
+		
+	   /*if (generator == null) {
+			throw new ResourceNotFoundException("Product " + id + " not found!");
+	   }*/
+	   
+	   product.setclient_id(productResource.getclient_id());
+	   product.setlabel(productResource.getlabel());
+	   
    }
    
    /**

@@ -71,6 +71,17 @@ public class ClientServiceImpl implements ClientService {
     * @generated
     */
    public void update(Integer id, ClientResource clientResource) {
+       log.entry(id);
+		
+	   Client client = clientDao.findOne(id);
+		
+	   /*if (generator == null) {
+			throw new ResourceNotFoundException("Client " + id + " not found!");
+	   }*/
+	   
+	   client.setname(clientResource.getname());
+	   client.setcolumn(clientResource.getcolumn());
+	   
    }
    
    /**
