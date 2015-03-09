@@ -35,7 +35,8 @@ public class Product implements Identifiable<Integer> {
      * <!--  end-user-doc  -->
      * @generated
      */
-    @ManyToOne
+    @Column(nullable = true)
+				@ManyToOne
     private Integer client_id;
     
     /**

@@ -194,12 +194,12 @@
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.model-representations</artifactId>
+			<artifactId>model-representations</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.model-services</artifactId>
+			<artifactId>model-services</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
@@ -236,7 +236,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>com.model</warName>
+					<warName>model</warName>
 				</configuration>
 			</plugin>
 		</plugins>
