@@ -1,9 +1,10 @@
+
+Mon Mar 09 17:03:12 UTC 2015
+================================================================================
 package com.model.service;
 
 import java.util.List;
 import java.util.Set;
-
-import com.model.representations.ProductResource;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,5 +12,5 @@ import com.model.representations.ProductResource;
  * @generated
  */
 public interface ProductService {
-    ProductResource find(Integer id);
+    ProductResource find(Integer id)
 }
