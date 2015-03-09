@@ -16,7 +16,7 @@ import com.model.representations.BasicResourceAssembler;
  * <!--  end-user-doc  -->
  * @generated
  */
-public class ProductAssembler extends BasicResourceAssembler<Product, ProductResource> {
+public class ProductResourceAssembler extends BasicResourceAssembler<Product, ProductResource> {
 
     /**
      * <!-- begin-user-doc -->

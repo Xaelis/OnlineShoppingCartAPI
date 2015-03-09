@@ -16,7 +16,7 @@ import com.model.representations.BasicResourceAssembler;
  * <!--  end-user-doc  -->
  * @generated
  */
-public class ClientAssembler extends BasicResourceAssembler<Client, ClientResource> {
+public class ClientResourceAssembler extends BasicResourceAssembler<Client, ClientResource> {
 
     /**
      * <!-- begin-user-doc -->

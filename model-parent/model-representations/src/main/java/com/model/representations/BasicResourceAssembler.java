@@ -135,7 +135,6 @@ public abstract class BasicResourceAssembler<T extends Identifiable<?>, D extend
 	 */
 	protected Class<?> getController(String controllerName)
 	{
-		// Could be optimized by a Map if optimization is really needed
 		return context.getType(controllerName);
 	}
 	
