@@ -79,8 +79,8 @@ public class ClientServiceImpl implements ClientService {
 			throw new ResourceNotFoundException("Client " + id + " not found!");
 	   }*/
 	   
-	   client.setname(clientResource.getname());
-	   client.setcolumn(clientResource.getcolumn());
+	   client.setName(clientResource.getName());
+	   client.setColumn(clientResource.getColumn());
 	   
    }
    

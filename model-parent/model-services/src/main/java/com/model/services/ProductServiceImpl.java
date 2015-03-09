@@ -79,8 +79,8 @@ public class ProductServiceImpl implements ProductService {
 			throw new ResourceNotFoundException("Product " + id + " not found!");
 	   }*/
 	   
-	   product.setclient_id(productResource.getclient_id());
-	   product.setlabel(productResource.getlabel());
+	   product.setClient_id(productResource.getClient_id());
+	   product.setLabel(productResource.getLabel());
 	   
    }
    
