@@ -90,5 +90,11 @@ public class ProductServiceImpl implements ProductService {
     * @generated
     */
    public ProductResource create(ProductResource productResource) {
+       log.entry(productResource);
+       
+       Product product = new Product();
+       
+	   product.setClient_id(productResource.getClient_id());
+	   product.setLabel(productResource.getLabel());
    }
 }

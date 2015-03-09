@@ -90,5 +90,11 @@ public class ClientServiceImpl implements ClientService {
     * @generated
     */
    public ClientResource create(ClientResource clientResource) {
+       log.entry(clientResource);
+       
+       Client client = new Client();
+       
+	   client.setName(clientResource.getName());
+	   client.setColumn(clientResource.getColumn());
    }
 }
