@@ -44,10 +44,10 @@ public class ProductResource extends ResourceSupport {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setclient_id(Integer client_id) {
+	public void setClient_id(Integer client_id) {
 	    this.client_id = client_id;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -62,7 +62,7 @@ public class ProductResource extends ResourceSupport {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setlabel(String label) {
+	public void setLabel(String label) {
 	    this.label = label;
 	}
 	

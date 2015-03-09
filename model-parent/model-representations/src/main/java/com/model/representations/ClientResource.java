@@ -44,10 +44,10 @@ public class ClientResource extends ResourceSupport {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setname(String name) {
+	public void setName(String name) {
 	    this.name = name;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -62,7 +62,7 @@ public class ClientResource extends ResourceSupport {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setcolumn(Integer column) {
+	public void setColumn(Integer column) {
 	    this.column = column;
 	}
 	

@@ -66,10 +66,10 @@ public class Product implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setid(Integer id) {
+	public void setId(Integer id) {
 	    this.id = id;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -84,10 +84,10 @@ public class Product implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setclient_id(Integer client_id) {
+	public void setClient_id(Integer client_id) {
 	    this.client_id = client_id;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -102,7 +102,7 @@ public class Product implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setlabel(String label) {
+	public void setLabel(String label) {
 	    this.label = label;
 	}
 	

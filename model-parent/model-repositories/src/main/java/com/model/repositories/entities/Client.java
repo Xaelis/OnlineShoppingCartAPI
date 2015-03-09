@@ -71,10 +71,10 @@ public class Client implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setid(Integer id) {
+	public void setId(Integer id) {
 	    this.id = id;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -89,10 +89,10 @@ public class Client implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setname(String name) {
+	public void setName(String name) {
 	    this.name = name;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -107,7 +107,7 @@ public class Client implements Identifiable<Integer> {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setcolumn(Integer column) {
+	public void setColumn(Integer column) {
 	    this.column = column;
 	}
 	
