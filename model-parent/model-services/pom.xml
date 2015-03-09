@@ -24,13 +24,6 @@
 			<artifactId>jasypt</artifactId> <!-- for? -->
 			<version>1.9.1</version> <!-- move version in parent -->
 		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework.social</groupId>
-			<artifactId>spring-social-security</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
