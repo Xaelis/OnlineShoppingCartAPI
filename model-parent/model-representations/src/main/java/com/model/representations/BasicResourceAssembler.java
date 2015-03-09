@@ -144,8 +144,8 @@ public abstract class BasicResourceAssembler<T extends Identifiable<?>, D extend
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	protected Class<?> getProjectController() {
-		return this.getController("projectController");
+	protected Class<?> getClientController() {
+		return this.getController("clientController");
 	}
 
 	/**
@@ -153,17 +153,7 @@ public abstract class BasicResourceAssembler<T extends Identifiable<?>, D extend
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	protected Class<?> getProjectController()
-	{
-		return this.getController("projectController");
-	}
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	protected Class<?> getProjectController()
-	{
-		return this.getController("projectController");
+	protected Class<?> getProductController() {
+		return this.getController("productController");
 	}
 }
