@@ -84,6 +84,6 @@
 			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
 			<scope>test</scope>
-		</dependency>S
+		</dependency>
 	</dependencies>
 </project>
