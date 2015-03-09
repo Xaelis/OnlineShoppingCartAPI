@@ -12,4 +12,8 @@ import com.model.representations.ClientResource;
  */
 public interface ClientService {
     ClientResource find(Integer id);
+
+				void update(Integer id, ClientResource clientResource);
+
+				ClientResource create(ClientResource clientResource);
 }

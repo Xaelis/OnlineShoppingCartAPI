@@ -12,4 +12,8 @@ import com.model.representations.ProductResource;
  */
 public interface ProductService {
     ProductResource find(Integer id);
+
+				void update(Integer id, ProductResource productResource);
+
+				ProductResource create(ProductResource productResource);
 }
