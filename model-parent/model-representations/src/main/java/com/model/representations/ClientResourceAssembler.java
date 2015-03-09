@@ -1,47 +1,45 @@
 package com.model.representations;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+
 import java.security.MessageDigest;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.util.Calendar;
-
-import java.util.List;
-
 import org.springframework.hateoas.Link;
-import org.springframework.hateoas.ResourceSupport;
 
-import com.model.repositories.entities.Product;
+import com.model.repositories.entities.Client;
 import com.model.representations.BasicResourceAssembler;
-import com.wordnik.swagger.annotations.ApiModelProperty;
 
 /**
  * <!-- begin-user-doc -->
  * <!--  end-user-doc  -->
  * @generated
  */
-public class ProductResource extends ResourceSupport {
+public class ClientAssembler extends BasicResourceAssembler<Client, ClientResource> {
+
     /**
      * <!-- begin-user-doc -->
      * <!--  end-user-doc  -->
      * @generated
      */
-    private Integer client_id;
+    private static final Logger	log	= LogManager.getLogger();
+    
     /**
      * <!-- begin-user-doc -->
      * <!--  end-user-doc  -->
      * @generated
      */
-    private String label;
-    
-    
+	protected final Class<?>	clientController;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public Integer getClient_id() {
-	    return this.client_id;
+	public ClientResourceAssembler(Class<?> clientController) {
+		super(clientController, ClientResource.class);
+		this.clientController = clientController;
 	}
 	
 	/**
@@ -49,27 +47,13 @@ public class ProductResource extends ResourceSupport {
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public void setClient_id(Integer client_id) {
-	    this.client_id = client_id;
+	@Override
+	public ClientResource toResource(Client entity) {
+		ClientResource resource = super.toResource(entity);
+		
+        resource.getLinks().add(
+        			linkTo(clientController).slash(entity).slash("client_id").withRel("client_id"));
+		
+		return resource;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public String getLabel() {
-	    return this.label;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public void setLabel(String label) {
-	    this.label = label;
-	}
-	
-	
 }

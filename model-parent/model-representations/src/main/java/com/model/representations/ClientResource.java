@@ -20,30 +20,28 @@ import com.wordnik.swagger.annotations.ApiModelProperty;
  * <!--  end-user-doc  -->
  * @generated
  */
-public class ClientAssembler extends BasicResourceAssembler<Client, ClientResource> {
-
+public class ClientResource extends ResourceSupport {
     /**
      * <!-- begin-user-doc -->
      * <!--  end-user-doc  -->
      * @generated
      */
-    private static final Logger	log	= LogManager.getLogger();
+    private String name;
+    /**
+     * <!-- begin-user-doc -->
+     * <!--  end-user-doc  -->
+     * @generated
+     */
+    private Integer column;
     
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  -->
-     * @generated
-     */
-	protected final Class<?>	clientController;
-	
+    
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public ClientResourceAssembler(Class<?> clientController) {
-		super(clientController, ClientResource.class);
-		this.clientController = clientController;
+	public String getName() {
+	    return this.name;
 	}
 	
 	/**
@@ -51,13 +49,27 @@ public class ClientAssembler extends BasicResourceAssembler<Client, ClientResour
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	@Override
-	public ClientResource toResource(Client entity) {
-		ClientResource resource = super.toResource(entity);
-		
-        resource.getLinks().add(
-        			linkTo(clientController).slash(entity).slash("client_id").withRel("client_id"));
-		
-		return resource;
+	public void setName(String name) {
+	    this.name = name;
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 */
+	public Integer getColumn() {
+	    return this.column;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 */
+	public void setColumn(Integer column) {
+	    this.column = column;
+	}
+	
+	
 }
