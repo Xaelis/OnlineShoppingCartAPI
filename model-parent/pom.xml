@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.model</groupId>
-	<artifactId>com.model-parent</artifactId>
+	<artifactId>model-parent</artifactId>
 	<version>1.0</version>
 	<name>com.model API Parent Project</name>
 	<packaging>pom</packaging>
@@ -15,10 +15,10 @@
 	</properties>
 
 	<modules>
-		<module>com.model-representations</module>
-		<module>com.model-repositories</module>
-		<module>com.model-services</module>
-		<module>com.model-webapp</module>
+		<module>model-representations</module>
+		<module>model-repositories</module>
+		<module>model-services</module>
+		<module>model-webapp</module>
 	</modules>
 
 	<dependencies>

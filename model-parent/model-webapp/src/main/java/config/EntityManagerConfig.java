@@ -84,12 +84,10 @@ public class EntityManagerConfig
 	@Bean
 	public DataSource dataSource()
 	{
-		try
-		{
+		try {
 			Class.forName("org.postgresql.Driver");
 		}
-		catch (ClassNotFoundException e)
-		{
+		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		
