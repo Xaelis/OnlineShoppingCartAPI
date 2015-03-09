@@ -44,10 +44,10 @@ public class EntityManagerConfig
 	}
 	
 	/**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!--  end-user-doc  -->
-     * @generated
-     */
+	 * @generated
+	 */
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean()
 	{
@@ -77,19 +77,17 @@ public class EntityManagerConfig
 	}
 	
 	/**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!--  end-user-doc  -->
-     * @generated
-     */
+	 * @generated
+	 */
 	@Bean
 	public DataSource dataSource()
 	{
-		try
-		{
+		try {
 			Class.forName("org.postgresql.Driver");
 		}
-		catch (ClassNotFoundException e)
-		{
+		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		
