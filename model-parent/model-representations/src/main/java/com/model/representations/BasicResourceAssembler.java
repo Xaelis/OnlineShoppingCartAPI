@@ -86,8 +86,7 @@ public abstract class BasicResourceAssembler<T extends Identifiable<?>, D extend
 
 		List<Object> result = new ArrayList<Object>(values.length);
 
-		for (Object element : Arrays.asList(values))
-		{
+		for (Object element : Arrays.asList(values)) {
 			result.add(
 				element instanceof Identifiable ? ((Identifiable<?>) element).getId() : element
 			);
@@ -140,6 +139,15 @@ public abstract class BasicResourceAssembler<T extends Identifiable<?>, D extend
 		return context.getType(controllerName);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 */
+	protected Class<?> getProjectController() {
+		return this.getController("projectController");
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
