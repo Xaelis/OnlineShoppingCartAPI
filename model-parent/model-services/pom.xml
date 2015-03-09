@@ -2,21 +2,21 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.model</groupId>
-		<artifactId>com.model-parent</artifactId>
+		<groupId>model</groupId>
+		<artifactId>model-parent</artifactId>
 		<version>1.0</version>
 	</parent>
 
-	<artifactId>com.model-services</artifactId>
+	<artifactId>model-services</artifactId>
     <dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.model-representations</artifactId>
+			<artifactId>model-representations</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.model-repositories</artifactId>
+			<artifactId>model-repositories</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>

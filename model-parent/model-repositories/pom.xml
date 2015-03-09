@@ -2,12 +2,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.model</groupId>
-		<artifactId>com.model-parent</artifactId>
+		<groupId>model</groupId>
+		<artifactId>model-parent</artifactId>
 		<version>1.0</version>
 	</parent>
 
-	<artifactId>com.model-repositories</artifactId>
+	<artifactId>model-repositories</artifactId>
 
 	<dependencies>
 		<dependency>
