@@ -21,12 +21,6 @@ public class ProductResource extends ResourceSupport {
      * <!--  end-user-doc  -->
      * @generated
      */
-    private Integer id;
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  -->
-     * @generated
-     */
     private Integer client_id;
     /**
      * <!-- begin-user-doc -->
@@ -36,24 +30,6 @@ public class ProductResource extends ResourceSupport {
     private String label;
     
     
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public Integer getId() {
-	    return this.id;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public void setid(Integer id) {
-	    this.id = id;
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->

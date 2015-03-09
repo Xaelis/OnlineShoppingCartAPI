@@ -21,12 +21,6 @@ public class ClientResource extends ResourceSupport {
      * <!--  end-user-doc  -->
      * @generated
      */
-    private Integer id;
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  -->
-     * @generated
-     */
     private String name;
     /**
      * <!-- begin-user-doc -->
@@ -36,24 +30,6 @@ public class ClientResource extends ResourceSupport {
     private Integer column;
     
     
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public Integer getId() {
-	    return this.id;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public void setid(Integer id) {
-	    this.id = id;
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
