@@ -3,6 +3,9 @@ package com.model.services;
 import java.util.List;
 import java.util.Set;
 
+import javax.inject.Inject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.model.representations.ClientResource;
 
 /**
@@ -16,7 +19,47 @@ public class ClientServiceImpl implements ClientService {
     * <!--  end-user-doc  -->
     * @generated
     */
-   ClientResource find(Integer id) {
+   private static final Logger						log	= LogManager.getLogger();
+	/**
+    * <!-- begin-user-doc -->
+    * <!--  end-user-doc  -->
+    * @generated
+    */
+   private final ClientDao                       clientDao;
+	/**
+    * <!-- begin-user-doc -->
+    * <!--  end-user-doc  -->
+    * @generated
+    */
+   private final ClientResourceAssembler                       clientResourceAssembler;
+
+	/**
+    * <!-- begin-user-doc -->
+    * <!--  end-user-doc  -->
+    * @generated
+    */
+   @Inject
+   public ClientServiceImpl(ClientDao clientDao,
+                               ClientResourceAssembler clientResourceAssembler) {
+      this.clientDao = clientDao;
+      this.clientResourceAssembler = clientResourceAssembler;
+   }
+
+			/**
+    * <!-- begin-user-doc -->
+    * <!--  end-user-doc  -->
+    * @generated
+    */
+   public ClientResource find(Integer id) {
+       log.entry(id);
+		
+	   Client client = clientDao.findOne(id);
+		
+	   /*if (generator == null) {
+			throw new ResourceNotFoundException("Client " + id + " not found!");
+	   }*/
+		
+	   return log.exit(clientResourceAssembler.toResource( client));
    }
    
    /**
@@ -24,7 +67,7 @@ public class ClientServiceImpl implements ClientService {
     * <!--  end-user-doc  -->
     * @generated
     */
-   void update(Integer id, ClientResource clientResource) {
+   public void update(Integer id, ClientResource clientResource) {
    }
    
    /**
@@ -32,6 +75,6 @@ public class ClientServiceImpl implements ClientService {
     * <!--  end-user-doc  -->
     * @generated
     */
-   ClientResource create(ClientResource clientResource) {
+   public ClientResource create(ClientResource clientResource) {
    }
 }
