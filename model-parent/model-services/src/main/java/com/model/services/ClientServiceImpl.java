@@ -10,7 +10,6 @@ import com.model.representations.ClientResource;
 import com.model.representations.ClientResourceAssembler;
 import com.model.repositories.entities.Client;
 import com.model.repositories.dao.ClientDao;
-import com.model.repositories.ClientDao;
 
 /**
  * <!-- begin-user-doc -->
