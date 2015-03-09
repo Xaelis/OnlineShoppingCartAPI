@@ -8,6 +8,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.model.representations.ClientResource;
 import com.model.representations.ClientResourceAssembler;
+import com.model.repositories.entities.Client;
+import com.model.repositories.dao.ClientDao;
 import com.model.repositories.ClientDao;
 
 /**

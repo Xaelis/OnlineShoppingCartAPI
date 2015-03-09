@@ -8,6 +8,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.model.representations.ProductResource;
 import com.model.representations.ProductResourceAssembler;
+import com.model.repositories.entities.Product;
+import com.model.repositories.dao.ProductDao;
 import com.model.repositories.ProductDao;
 
 /**
