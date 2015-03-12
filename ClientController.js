@@ -1,7 +1,6 @@
 app.controller("clientController", function clientController($scope) {
-$scope.id = '';
-$scope.name = '';
-$scope.column = '';
+$scope.selectedIndex = 'newClient';
+$scope.client = {id: '', name:'', column:''};
 $scope.clients = [
 {id:1, name:'Toto', column:100},
 {id:2, name:'Titi', column:150},
@@ -11,31 +10,43 @@ $scope.newClient = true;
 $scope.error = false;
 $scope.incomplete = false; 
 
-$scope.editClient = function(id) {
-  if (id == 'new') {
-    $scope.newClient = true;
-    $scope.incomplete = true;
-    $scope.id = '';
-    $scope.name = '';
-    $scope.column = '';
+$scope.editClient = function(index) {
+  if (index == 'new') {
+     $scope.cleanForm();
     } else {
     $scope.newClient = false;
-    $scope.id = $scope.clients[id-1].id;
-    $scope.name = $scope.clients[id-1].name;
-    $scope.column = $scope.clients[id-1].column;
+    $scope.selectedIndex = index;
+    $scope.client.id = $scope.clients[index].id;
+    $scope.client.name = $scope.clients[index].name;
+    $scope.client.column = $scope.clients[index].column;
   }
 };
 
 $scope.saveClient = function() {
-  $scope.clients[$scope.id-1].name = $scope.name;
-  $scope.clients[$scope.id-1].column = $scope.column;
+  if ($scope.selectedIndex != 'newClient') {
+    $scope.clients[$scope.selectedIndex].name = $scope.client.name;
+    $scope.clients[$scope.selectedIndex].column = $scope.client.column;
+ } else {
+    $scope.clients.push(angular.copy($scope.client));
+    $scope.cleanForm();
+ }
+};
+
+$scope.cleanForm = function() {
+   $scope.newClient = true;
+   $scope.incomplete = true;
+   $scope.selectedIndex = 'newClient';
+   $scope.index = '';
+   $scope.client.id = '';
+   $scope.client.name = '';
+   $scope.client.column = '';
 };
 
 //$scope.$watch('passw1',function() {$scope.test();});
 //$scope.$watch('passw2',function() {$scope.test();});
-$scope.$watch('id', function() {$scope.test();});
-$scope.$watch('name', function() {$scope.test();});
-$scope.$watch('column', function() {$scope.test();});
+$scope.$watch('client.id', function() {$scope.test();});
+$scope.$watch('client.name', function() {$scope.test();});
+$scope.$watch('client.column', function() {$scope.test();});
 
 $scope.test = function() {
   /*if ($scope.passw1 !== $scope.passw2) {
@@ -44,7 +55,7 @@ $scope.test = function() {
     $scope.error = false;
   }*/
   $scope.incomplete = false;
-  if ($scope.newClient && (!$scope.id.length ||  !$scope.name.length ||  !$scope.column.length)) {
+  if ($scope.newClient && (!$scope.client.id.length ||  !$scope.client.name.length ||  !$scope.client.column.length)) {
        $scope.incomplete = true;
   }
 };
