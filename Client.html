@@ -19,7 +19,7 @@
   </tr></thead>
   <tbody><tr ng-repeat="client in clients">
     <td>
-      <button class="btn" ng-click="editClient(client.id)">
+      <button class="btn" ng-click="editClient($index)">
       <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
       </button>
     </td>

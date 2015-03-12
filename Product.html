@@ -19,7 +19,7 @@
   </tr></thead>
   <tbody><tr ng-repeat="product in products">
     <td>
-      <button class="btn" ng-click="editProduct(product.id)">
+      <button class="btn" ng-click="editProduct($index)">
       <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
       </button>
     </td>
