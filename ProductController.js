@@ -3,8 +3,8 @@ $scope.selectedIndex = 'newProduct';
 $scope.product = {id:'', client_id:'', label:''};
 
 $scope.products = [
-{id:'data', client_id:'data', label:'data'},
-{id:'data2', client_id:'data2', label:'data2'}
+{id:'dataid', client_id:'dataclient_id', label:'datalabel'},
+{id:'dataid2', client_id:'dataclient_id2', label:'datalabel2'}
 ];
 
 $scope.newProduct = true;

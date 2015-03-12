@@ -3,8 +3,8 @@ $scope.selectedIndex = 'newClient';
 $scope.client = {id:'', name:'', column:''};
 
 $scope.clients = [
-{id:'data', name:'data', column:'data'},
-{id:'data2', name:'data2', column:'data2'}
+{id:'dataid', name:'dataname', column:'datacolumn'},
+{id:'dataid2', name:'dataname2', column:'datacolumn2'}
 ];
 
 $scope.newClient = true;
