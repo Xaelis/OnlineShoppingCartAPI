@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="com.model">
 <head>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 </head>
 
-<body ng-controller="userController">
+<body ng-controller="clientController">
 <div class="container">
 
 <h3>Client</h3>
@@ -42,29 +42,30 @@
 <div class="form-group">
   <label class="col-sm-2 control-label">id:</label>
   <div class="col-sm-10">
-    <input type="text" ng-model="id" ng-disabled="!edit" placeholder="id">
+    <input type="text" ng-model="id" ng-disabled="!newClient" placeholder="id">
   </div>
 </div> 
 <div class="form-group">
   <label class="col-sm-2 control-label">name:</label>
   <div class="col-sm-10">
-    <input type="text" ng-model="name" ng-disabled="!edit" placeholder="name">
+    <input type="text" ng-model="name" placeholder="name">
   </div>
 </div> 
 <div class="form-group">
   <label class="col-sm-2 control-label">column:</label>
   <div class="col-sm-10">
-    <input type="text" ng-model="column" ng-disabled="!edit" placeholder="column">
+    <input type="text" ng-model="column" placeholder="column">
   </div>
 </div> 
 </form>
 
 <hr>
-<button class="btn btn-success" ng-disabled="error || incomplete">
+<button class="btn btn-success" ng-click="saveClient()" ng-disabled="error || incomplete">
   <span class="glyphicon glyphicon-save"></span> Save Changes
 </button>
 </div>
 
+<script src="com.model.js"></script>
 <script src = "ClientController.js"></script>
 </body>
 </html>
