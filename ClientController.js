@@ -12,7 +12,7 @@ $scope.error = false;
 $scope.incomplete = false; 
 
 $scope.editClient = function(index) {
-  if (id == 'new') {
+  if (index == 'new') {
       $scope.cleanForm();
     } else {
       $scope.newClient = false;
