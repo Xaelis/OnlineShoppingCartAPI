@@ -1,50 +1,59 @@
-app.controller("Product", function userController($scope) {
-$scope.id = '';
-$scope.client_id = '';
-$scope.label = '';
+app.controller("productController", function productController($scope) {
+$scope.selectedIndex = 'newProduct';
+$scope.product = {id:'', client_id:'', label:''};
+
 $scope.products = [
-{id:val
-, client_id:val
-, label:val
-}
+{id:'data', client_id:'data', label:'data'},
+{id:'data2', client_id:'data2', label:'data2'}
 ];
 
-$scope.edit = true;
+$scope.newProduct = true;
 $scope.error = false;
 $scope.incomplete = false; 
 
-$scope.editProduct = function(id) {
+$scope.editProduct = function(index) {
   if (id == 'new') {
-    $scope.edit = true;
-    $scope.incomplete = true;
-    $scope.id = '';
-    $scope.client_id = '';
-    $scope.label = '';
+      $scope.cleanForm();
     } else {
-    $scope.edit = false;
-    $scope.id = $scope.products[id-1].id;
-    $scope.client_id = $scope.products[id-1].client_id;
-    $scope.label = $scope.products[id-1].label;
-  }
+      $scope.newProduct = false;
+      $scope.selectedIndex = index;
+      $scope.product.id = $scope.products[index].id;
+      $scope.product.client_id = $scope.products[index].client_id;
+      $scope.product.label = $scope.products[index].label;
+    }
 };
 
-//$scope.$watch('passw1',function() {$scope.test();});
-//$scope.$watch('passw2',function() {$scope.test();});
-$scope.$watch('id', function() {$scope.test();});
-$scope.$watch('client_id', function() {$scope.test();});
-$scope.$watch('label', function() {$scope.test();});
+
+$scope.saveProduct = function() {
+ if ($scope.selectedIndex != 'newProduct') {
+    $scope.clients[$scope.selectedIndex].id = $scope.product.id;
+    $scope.clients[$scope.selectedIndex].client_id = $scope.product.client_id;
+    $scope.clients[$scope.selectedIndex].label = $scope.product.label;
+ } else {
+    $scope.products.push(angular.copy($scope.product));
+    $scope.cleanForm();
+ }
+};
+
+$scope.cleanForm = function() {
+   $scope.newProduct = true;
+   $scope.incomplete = true;
+   $scope.selectedIndex = 'newProduct';
+   $scope.index = '';
+   $scope.product.id = '';
+   $scope.product.client_id = '';
+   $scope.product.label = '';
+};
+
+$scope.$watch('product.id', function() {$scope.test();});
+$scope.$watch('product.client_id', function() {$scope.test();});
+$scope.$watch('product.label', function() {$scope.test();});
 
 $scope.test = function() {
-  /*if ($scope.passw1 !== $scope.passw2) {
-    $scope.error = true;
-    } else {
-    $scope.error = false;
-  }*/
   $scope.incomplete = false;
-  if ($scope.edit && (
-  !$scope.id.length
-||  !$scope.client_id.length
-||  !$scope.label.length
+  if ($scope.newProduct && (!$scope.id.length
+ || !$scope.client_id.length
+ || !$scope.label.length
 )) {
        $scope.incomplete = true;
   }
