@@ -51,9 +51,9 @@ $scope.$watch('product.label', function() {$scope.test();});
 
 $scope.test = function() {
   $scope.incomplete = false;
-  if ($scope.newProduct && (!$scope.id.length
- || !$scope.client_id.length
- || !$scope.label.length
+  if ($scope.newProduct && (!$scope.product.id.length
+ || !$scope.product.client_id.length
+ || !$scope.product.label.length
 )) {
        $scope.incomplete = true;
   }

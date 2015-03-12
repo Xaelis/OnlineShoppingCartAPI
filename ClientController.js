@@ -51,9 +51,9 @@ $scope.$watch('client.column', function() {$scope.test();});
 
 $scope.test = function() {
   $scope.incomplete = false;
-  if ($scope.newClient && (!$scope.id.length
- || !$scope.name.length
- || !$scope.column.length
+  if ($scope.newClient && (!$scope.client.id.length
+ || !$scope.client.name.length
+ || !$scope.client.column.length
 )) {
        $scope.incomplete = true;
   }
